@@ -7,7 +7,7 @@ const app = express();
 // This code makes sure that any request that does not matches a static file
 // in the build folder, will just serve index.html. Client side routing is
 // going to make sure that the correct content will be loaded.
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
     if (/(.ico|.js|.css|.jpg|.png|.map)$/i.test(req.path)) {
         next();
     } else {
@@ -16,7 +16,7 @@ app.use((req, res, next) => {
         res.header('Pragma', 'no-cache');
         res.sendFile(path.join(__dirname, 'build', 'index.html'));
     }
-});
+}); */
 //app.use(express.static(path.join(__dirname, 'build')));
 app.get('/movement/:id', (req, res) => {
   const userId = req.params.id; // Access the ID from the URL parameters

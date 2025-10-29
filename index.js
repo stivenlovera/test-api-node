@@ -23,7 +23,7 @@ app.get('/movement/:id', (req, res) => {
   res.send(`Fetching details for user with ID: ${userId}`);
 });
 // Start the server
-const PORT = process.env.PORT || 3200;
+const PORT = process.env.PORT || 2000;
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
     console.log('Press Ctrl+C to quit.');
